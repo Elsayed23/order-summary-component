@@ -1,0 +1,179 @@
+/* Global Rules */
+body {
+    min-height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: hsl(225, 100%, 98%);
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+/* End */
+/* Section */
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/pattern-background-desktop.svg);
+    width: 100%;
+    height: 437px;
+}
+.parent {
+    border-radius: 15px;
+    width: fit-content;
+    box-shadow: 0 6px 16px -6px;
+    background: white;
+    position: relative;
+    padding-bottom: 25px;
+    z-index: 99;
+}
+.par-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 45px;
+}
+.parent > img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 25px;
+    width: 400px;
+}
+.parent .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.parent .content .top {
+    text-align: center;
+}
+.parent .content .top h1 {
+    color: hsl(223, 47%, 23%);
+    text-transform: capitalize;
+}
+.parent .content .top p {
+    max-width: 310px;
+    color: hsl(224, 23%, 55%);
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+.center {
+    width: 100%;
+    background: hsl(225, 100%, 98%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.parent .content .center .left {
+    display: flex;
+    gap: 15px;
+}
+.parent .content .center .left .plan h3 {
+    margin-bottom: 4px;
+}
+.parent .content .center .left .plan span {
+    color: hsl(224, 23%, 55%);
+}
+.parent .content .center a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+.parent .content .center a::before {
+    content: '';
+    background-color: #551A8B;
+    width: 100%;
+    height: 1.2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.parent button {
+    display: block;
+    width: 100%;
+    margin: 15px 0 20px;
+    cursor: pointer;
+    padding: 15px 25px;
+    background: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 21px -3px black;
+}
+.parent .par-content > span {
+    color: hsl(224, 23%, 55%);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* End */
+@media (max-width: 445px) {
+    .parent > img {
+        width: 100%;
+    }
+    .parent {
+        width: 100%;
+        margin: 0 20px;
+    }
+}
+@media (max-width: 435px) {
+    .par-content {
+        padding: 0 25px;
+    }
+}
+@media (max-width: 385px) {
+    .parent .content .top h1 {
+        font-size: 27px;
+    }
+    .parent .content .top p {
+        font-size: 15px;
+    }
+    .parent .content .center .left .plan h3 {
+        font-size: 17px;
+    }
+    .parent .content .center .left .plan span {
+        font-size: 14.7px;
+    }
+    .parent .content .top p {
+        max-width: 358px;
+    }
+}
+@media (max-width: 355px) {
+    .parent .content .center .left {
+        gap: 9px;
+    }
+    .parent .content .center .left .plan h3 {
+        font-size: 15.3px;
+    }
+    .parent .content .center .left .plan span {
+        font-size: 13.5px;
+    }
+    .parent .content .center a {
+        font-size: 15px;
+    }
+}
+@media (max-width: 375px) {
+    body::before {
+        background-image: url(../images/pattern-background-mobile.svg);
+        height: 194px;
+    }
+}
